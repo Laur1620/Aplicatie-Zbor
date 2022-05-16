@@ -13,13 +13,19 @@ import java.nio.file.Path;
 
 public class Main extends Application {
 
+    public static boolean loggedIn;
+
+    public static Stage primaryStage;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
+        Main.loggedIn = false;
         initDirectory();
         UserService.initDatabase();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
+        Main.primaryStage = primaryStage;
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("main.fxml"));
         primaryStage.setTitle("Registration Example");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 400, 300));
         primaryStage.show();
     }
 

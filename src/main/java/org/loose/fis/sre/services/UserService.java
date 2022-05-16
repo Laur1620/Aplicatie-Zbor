@@ -2,6 +2,7 @@ package org.loose.fis.sre.services;
 
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
+import org.loose.fis.sre.Main;
 import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
 import org.loose.fis.sre.model.User;
 
@@ -47,6 +48,17 @@ public class UserService {
                 .replace("\"", ""); //to be able to save in JSON format
     }
 
+    public static void checkUser(String username, String password){
+        for (User user : userRepository.find()) {
+            if(user.getUsername().equals(username) && user.getPassword().equals(encodePassword(username,password))){
+                System.out.println("Logged in");
+                Main.loggedIn = true;
+                return;
+            }
+        }
+        System.out.println("Incorrect username or password");
+    }
+
     private static MessageDigest getMessageDigest() {
         MessageDigest md;
         try {
@@ -56,6 +68,4 @@ public class UserService {
         }
         return md;
     }
-
-
 }
