@@ -17,6 +17,8 @@ import java.util.ArrayList;
 public class addFlightController {
 
     @FXML
+    private TextField id;
+    @FXML
     private TextField plecare;
     @FXML
     private TextField sosire;
@@ -30,7 +32,7 @@ public class addFlightController {
         Main.primaryStage.setScene(new Scene(root, 400, 300));
     }
     public void addFlight() {
-        FlightService.add_flight(new Flight(plecare.getText(),sosire.getText(), Date.valueOf(data.getValue()),Integer.parseInt(numaruMaxim.getText())));
+        FlightService.add_flight(new Flight(Integer.parseInt(id.getText()),plecare.getText(),sosire.getText(), Date.valueOf(data.getValue()),Integer.parseInt(numaruMaxim.getText())));
 
         ArrayList<Flight> f = FlightService.get_flights();
 
