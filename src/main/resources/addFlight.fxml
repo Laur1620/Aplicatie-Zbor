@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.addFlightController">
+   <children>
+      <Label layoutX="161.0" layoutY="128.0" text="Loc plecare:" />
+      <TextField fx:id="plecare" layoutX="235.0" layoutY="124.0" />
+      <Label layoutX="161.0" layoutY="170.0" text="Loc sosire:" />
+      <TextField fx:id="sosire" layoutX="236.0" layoutY="166.0" />
+      <Label layoutX="161.0" layoutY="226.0" text="Data plecari:" />
+      <DatePicker fx:id="data" layoutX="229.0" layoutY="222.0" />
+      <Label layoutX="161.0" layoutY="270.0" text="Numarul maxim de pasageri" />
+      <TextField fx:id="numaruMaxim" layoutX="316.0" layoutY="266.0" prefHeight="26.0" prefWidth="89.0" />
+      <Button layoutX="248.0" layoutY="316.0" mnemonicParsing="false" onAction="#addFlight" text="Adauga" />
+      <Button layoutX="109.0" layoutY="71.0" mnemonicParsing="false" onAction="#Back" text="Back" />
+   </children>
+</AnchorPane>
