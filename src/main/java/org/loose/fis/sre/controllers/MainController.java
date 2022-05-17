@@ -41,4 +41,9 @@ public class MainController {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
         Main.primaryStage.setScene(new Scene(root, 400, 300));
     }
+
+    public void addFlightClick() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("addFlight.fxml"));
+        Main.primaryStage.setScene(new Scene(root, 400, 300));
+    }
 }

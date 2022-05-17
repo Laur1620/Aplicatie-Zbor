@@ -7,7 +7,7 @@
    <children>
       <Button fx:id="registerbtn" layoutX="99.0" layoutY="142.0" mnemonicParsing="false" onAction="#RegisterClick" text="Register" />
       <Button fx:id="loginbtn" layoutX="245.0" layoutY="142.0" mnemonicParsing="false" onAction="#LogInClick" text="LogIn" />
-      <Button fx:id="addbtn" layoutX="74.0" layoutY="61.0" mnemonicParsing="false" text="Add flight" visible="false" />
+      <Button fx:id="addbtn" layoutX="74.0" layoutY="61.0" mnemonicParsing="false" onAction="#addFlightClick" text="Add flight" visible="false" />
       <Button fx:id="deletebtn" layoutX="237.0" layoutY="61.0" mnemonicParsing="false" text="Delete flight" visible="false" />
       <Button fx:id="editbtn" layoutX="158.0" layoutY="142.0" mnemonicParsing="false" text="Edit flights" visible="false" />
    </children>
