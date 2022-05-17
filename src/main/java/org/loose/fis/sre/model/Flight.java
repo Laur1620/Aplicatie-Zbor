@@ -15,6 +15,10 @@ public class Flight {
         this.nr_maxim = nr_maxim;
     }
 
+    public Flight(){
+
+    }
+
     public String getLocul_plecare() {
         return locul_plecare;
     }
