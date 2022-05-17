@@ -25,10 +25,12 @@ public class DeleteFlightController {
         for (Flight flight:flights) {
             VBox vb = new VBox();
 
+            Label idLabel = new Label();
             Label plecareLabel = new Label();
             Label sosireLabel = new Label();
             Label dataLabel = new Label();
             Label nrMaxLabel = new Label();
+            idLabel.setText("Zborul ID: " + flight.getFlight_id());
             plecareLabel.setText("Pleaca din: " + flight.getLocul_plecare());
             sosireLabel.setText("Sosire: " + flight.getLocul_sosire());
             dataLabel.setText("Data plecarii: " + flight.getData());
@@ -43,6 +45,7 @@ public class DeleteFlightController {
                 }
             });
 
+            vb.getChildren().add(idLabel);
             vb.getChildren().add(plecareLabel);
             vb.getChildren().add(sosireLabel);
             vb.getChildren().add(dataLabel);

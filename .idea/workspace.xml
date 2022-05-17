@@ -9,6 +9,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/DeleteFlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/DeleteFlightController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/addFlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/addFlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/model/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/model/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/addFlight.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addFlight.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/deleteFlight.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/deleteFlight.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
