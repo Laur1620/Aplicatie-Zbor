@@ -41,7 +41,9 @@ public class DeleteFlightController {
             deleteButton.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent actionEvent) {
-
+                    FlightService.delete_flight(flight);
+                    vBox.getChildren().clear();
+                    initialize();
                 }
             });
 

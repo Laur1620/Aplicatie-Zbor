@@ -11,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/addFlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/addFlightController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/model/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/model/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/FlightService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/addFlight.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addFlight.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/deleteFlight.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/deleteFlight.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />

@@ -28,4 +28,8 @@ public class FlightService {
         }
         return lista;
     }
+
+    public static void delete_flight(Flight f){
+        flightRepository.remove(f);
+    }
 }
