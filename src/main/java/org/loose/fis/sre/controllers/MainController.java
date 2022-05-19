@@ -27,12 +27,13 @@ public class MainController {
     private Button editbtn;
 
     public void initialize(){
-        if(Main.loggedIn){
+        if(Main.loggedIn && Main.role.equals("Admin")){
             registerbtn.setVisible(false);
             loginbtn.setVisible(false);
             addbtn.setVisible(true);
             deletebtn.setVisible(true);
             editbtn.setVisible(true);
+        }else if(Main.loggedIn && Main.role.equals("Client")){
 
         }
     }
