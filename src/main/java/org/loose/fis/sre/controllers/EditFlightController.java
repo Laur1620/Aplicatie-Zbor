@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import org.loose.fis.sre.Main;
 import org.loose.fis.sre.model.Flight;
 import org.loose.fis.sre.services.FlightService;
@@ -36,14 +37,29 @@ public class EditFlightController {
             dataLabel.setText("Data plecarii: " + flight.getData());
             nrMaxLabel.setText("Numarul maxim: " + flight.getNr_maxim());
 
-            Button deleteButton = new Button();
-            deleteButton.setText("Delete");
-            deleteButton.setOnAction(new EventHandler<ActionEvent>() {
+            Button editButton = new Button();
+            editButton.setText("Edit");
+            editButton.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent actionEvent) {
-                    FlightService.delete_flight(flight);
-                    vBox.getChildren().clear();
-                    initialize();
+
+                    Stage editStage = new Stage();
+                    Parent root = null;
+                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("editWindow.fxml"));
+                    try {
+                        root = loader.load();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    EditWindowController editWindowController = loader.getController();
+                    editWindowController.setFields(flight);
+                    editWindowController.setController(EditFlightController.this);
+
+                    editStage.setTitle("Edit Flight");
+                    editStage.setScene(new Scene(root, 400, 300));
+                    editStage.show();
+
                 }
             });
 
@@ -52,7 +68,7 @@ public class EditFlightController {
             vb.getChildren().add(sosireLabel);
             vb.getChildren().add(dataLabel);
             vb.getChildren().add(nrMaxLabel);
-            vb.getChildren().add(deleteButton);
+            vb.getChildren().add(editButton);
 
             vBox.getChildren().add(vb);
         }
@@ -61,5 +77,9 @@ public class EditFlightController {
     public void Back() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("main.fxml"));
         Main.primaryStage.setScene(new Scene(root, 400, 300));
+    }
+
+    public void clear(){
+        vBox.getChildren().clear();
     }
 }

@@ -39,4 +39,6 @@ public class FlightService {
     public static void delete_flight(Flight f){
         flightRepository.remove(f);
     }
+    public static void edit_flight(Flight f){
+        flightRepository.update(f);}
 }

@@ -38,6 +38,7 @@ public class addFlightController {
     public void addFlight() {
         try {
             FlightService.add_flight(new Flight(Integer.parseInt(id.getText()),plecare.getText(),sosire.getText(), Date.valueOf(data.getValue()),Integer.parseInt(numaruMaxim.getText())));
+            exceptie.setText("");
         }
         catch (InvalidFlightIdException ex){
             System.out.println(ex);
