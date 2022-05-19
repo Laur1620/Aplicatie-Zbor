@@ -18,6 +18,8 @@ public class Main extends Application {
 
     public static Stage primaryStage;
 
+    public static String role;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         Main.loggedIn = false;

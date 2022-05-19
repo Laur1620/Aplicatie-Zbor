@@ -53,6 +53,7 @@ public class UserService {
             if(user.getUsername().equals(username) && user.getPassword().equals(encodePassword(username,password))){
                 System.out.println("Logged in");
                 Main.loggedIn = true;
+                Main.role = user.getRole();
                 return;
             }
         }
