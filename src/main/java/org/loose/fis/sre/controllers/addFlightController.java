@@ -5,8 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import org.loose.fis.sre.Main;
+import org.loose.fis.sre.exceptions.InvalidFlightIdException;
 import org.loose.fis.sre.model.Flight;
 import org.loose.fis.sre.services.FlightService;
 
@@ -26,13 +28,21 @@ public class addFlightController {
     private TextField numaruMaxim;
     @FXML
     private DatePicker data;
+    @FXML
+    private Label exceptie;
 
     public void Back() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("main.fxml"));
         Main.primaryStage.setScene(new Scene(root, 400, 300));
     }
     public void addFlight() {
-        FlightService.add_flight(new Flight(Integer.parseInt(id.getText()),plecare.getText(),sosire.getText(), Date.valueOf(data.getValue()),Integer.parseInt(numaruMaxim.getText())));
+        try {
+            FlightService.add_flight(new Flight(Integer.parseInt(id.getText()),plecare.getText(),sosire.getText(), Date.valueOf(data.getValue()),Integer.parseInt(numaruMaxim.getText())));
+        }
+        catch (InvalidFlightIdException ex){
+            System.out.println(ex);
+            exceptie.setText("A flight with the same ID already exists");
+        }
 
         ArrayList<Flight> f = FlightService.get_flights();
 

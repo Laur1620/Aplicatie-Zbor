@@ -2,6 +2,7 @@ package org.loose.fis.sre.services;
 
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
+import org.loose.fis.sre.exceptions.InvalidFlightIdException;
 import org.loose.fis.sre.model.Flight;
 import org.loose.fis.sre.model.User;
 
@@ -17,9 +18,15 @@ public class FlightService {
                 .filePath(getPathToFile("flight.db").toFile()).openOrCreate();
         flightRepository = database.getRepository(Flight.class);
     }
-    public static void add_flight(Flight f){
+    public static void add_flight(Flight f) throws InvalidFlightIdException{
+        for (Flight fl:flightRepository.find()){
+            if(fl.getFlight_id() == f.getFlight_id()){
+                throw new InvalidFlightIdException();
+            }
+        }
         flightRepository.insert(f);
     }
+
     public static ArrayList<Flight> get_flights(){
         ArrayList<Flight> lista=new ArrayList<>();
         for (Flight f:flightRepository.find(
