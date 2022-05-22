@@ -7,8 +7,9 @@
     <list default="true" id="7f2a548c-b233-4d71-8986-d02048702d34" name="Changes" comment="LogIn task: AZ-22, AZ-21">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/CheckFlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/CheckFlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/EditWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/EditWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/checkFlight.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/checkFlight.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +102,7 @@
       <workItem from="1652988255158" duration="648000" />
       <workItem from="1653146055328" duration="207000" />
       <workItem from="1653147090128" duration="1812000" />
-      <workItem from="1653153429653" duration="2566000" />
+      <workItem from="1653153429653" duration="7412000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit: Basic project structure.">
       <created>1652599858230</created>
