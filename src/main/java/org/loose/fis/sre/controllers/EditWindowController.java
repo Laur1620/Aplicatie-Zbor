@@ -25,6 +25,8 @@ public class EditWindowController {
 
     private EditFlightController editFlightController;
 
+    private CheckFlightController checkFlightController;
+
     private Flight flight;
 
     public void saveEdit(){
